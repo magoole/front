@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Magoole, Mes recherches, Mes données, Mes droits</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="../static/index.css">
+    <link rel="stylesheet" href="../static/fontawesome/css/all.min.css">
+</head>
+<body>
+<div id="app">
+    <section class="hero is-fullheight is-light" >
+        <div class="hero-head">
+            <nav class="navbar is-transparent is-spaced" role="navigation" aria-label="main navigation">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <a class="navbar-item" href="/">
+                            <img style="max-height: none" src="../static/assets/logo_large.png" alt="Magoole" width="80" height="20">
+                        </a>
+                        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarTopMain">
+                            <span aria-hidden="true"></span>
+                            <span aria-hidden="true"></span>
+                            <span aria-hidden="true"></span>
+                        </a>
+                    </div>
+                    <div class="navbar-menu" id="navbarTopMain">
+                        <div class="navbar-end">
+                            <a onclick="document.getElementById('mainSearch').focus()"
+                               class="navbar-item has-text-weight-semibold">
+                                <span>Rechercher</span>
+                            </a>
+                            <a href="/ref"
+                               class="navbar-item has-text-weight-semibold">Référencement</a>
+                            <a href="/dev"
+                               class="navbar-item has-text-weight-semibold">Développeurs</a>
+                            <a href="/trends" class="navbar-item has-text-weight-semibold">Trends</a>
+                            <span class="tag is-success m-l-5">NEW</span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="hero-body  p-b-30 ">
+            <div class="container">
+                <h2 class="subtitle">
+					<span class="has-text-centered is-block">
+						Recherchez des centaines de milliers de sites web, simplement, avec un contrôle total de vos données !
+					</span>
+                </h2>
+                <h1 class="title">
+                    <span class="is-size-2 has-text-centered is-block">Rechercher:</span>
+                </h1>
+                <div class="columns is-centered">
+                    <div class="column is-7">
+                        <div class="search-form">
+                            <form action="/search" method="get" id="search">
+                                <div class="field has-addons has-shadow-field">
+                                    <div class="control has-icons-left is-expanded">
+                                        <input type="text" id="mainSearch" name="q" placeholder="" class="input is-large">
+                                        <span class="icon is-small is-left">
+											<svg style="transform: scale(0.5)" class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" data-prefix="fa" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+												<path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z">
+												</path>
+											</svg>
+										</span>
+                                    </div>
+                                    <div class="control">
+                                        <button id="button-search" type="button" class="button is-large is-primary">
+                                            <span class="has-text-weight-semibold"><i class="fas fa-arrow-right"></i></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="has-text-centered">
+                    <img id="basic-image" class="m-t-50" src="../static/assets/logo_small_icon_only_inverted_blue.png" alt="Magooole logo">
+                </div>
+            </div>
+        </div>
+        <footer class="hero is-small is-light">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <a href="/">
+                        <img src="/static/assets/logo.svg" alt="Made with Bulma" width="171" height="32">
+                    </a>
+                    <div class="columns m-t-10">
+                        <div class="column">
+                            <nav class="has-text-grey-light">
+                                <a href="/about" target="_blank" class="has-text-primary">À propos</a> &bullet;
+                                <a href="/story" target="_blank" class="has-text-primary">Notre histoire</a> &bullet;
+                                <a href="https://github.com/magoole" target="_blank" class="has-text-primary">Github</a> &bullet;
+                                <a href="/contact" target="_blank" class="has-text-primary">Contacte nous</a> &bullet;
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="b-t m-t-30 p-t-30 has-text-grey-light is-size-7">
+                        Magoole 2022 &copy; CAMARM-DEV <br> <a href="/static/terms" target="_blank" class="has-text-primary">Conditions d'utilisations</a> et <a class="has-text-primary" href="/static/privacy" target="_blank">Politique de confidentialité</a>.
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+</div>
+<script>
+    const trends_search = ['camarm dev', 'messi psg', 'twitch leak']
+    document.addEventListener('DOMContentLoaded', () => {
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+        // Check if there are any navbar burgers
+        if ($navbarBurgers.length > 0) {
+            // Add a click event on each of them
+            $navbarBurgers.forEach( el => {
+                el.addEventListener('click', () => {
+                    // Get the target from the "data-target" attribute
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+                    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                    el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
+                });
+            });
+        }
+    });
+    async function search_input(el) {
+        for (const search of trends_search) {
+            // alert(search)
+            console.log(search)
+            el.placeholder = ''
+            for (const letter of search.split('')) {
+                // alert(letter)
+                console.log(letter)
+                el.placeholder += letter
+            }
+        }
+    }
+    window.onload = function () { search_input(document.getElementById('mainSearch')) }
+    const search_button = document.getElementById('button-search')
+    search_button.addEventListener('mouseenter', () => {
+        search_button.innerHTML = "<img id=\"button-image\" src=\"../static/assets/logo_small_icon_only.png\">"
+    })
+    search_button.addEventListener('mouseleave', () => {
+        search_button.innerHTML = "<span class=\"has-text-weight-semibold\"><i class=\"fas fa-arrow-right\"></i></span>"
+    })
+    search_button.addEventListener('click', () => {
+        document.getElementById('basic-image').setAttribute('class', 'm-t-50 active')
+        setTimeout(() => {
+            document.getElementById('search').submit()
+        }, 1000)
+    })
+</script>
+</body>
+</html>

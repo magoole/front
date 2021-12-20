@@ -1,0 +1,206 @@
+.sub-section {
+    margin-bottom: 60px;
+}
+.rb-card {
+    border: none;
+    border-radius: 4px;
+    box-shadow: 5px 5px 16px 0 rgba(0, 0, 0, 0.13);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+.rb-card a {
+    color: #515f6a;
+}
+.rb-card:hover {
+    transform: scale(1.015);
+}
+.m-l-5 {
+    margin-left: 5px !important;
+}
+.p-t-30 {
+    padding-top: 30px !important;
+}
+.p-b-30 {
+    padding-bottom: 30px !important;
+}
+.m-t-10 {
+    margin-top: 10px !important;
+}
+.m-t-30 {
+    margin-top: 30px !important;
+}
+.m-t-50 {
+    margin-top: 50px !important;
+}
+.m-t-60 {
+    margin-top: 60px !important;
+}
+.b-t {
+    border-top: 1px solid #e2e8ef;
+}
+.ellipsis {
+    display: block;
+    display: -webkit-box;
+    margin: 0 auto;
+    line-height: 1.4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.is-ellipsis-1 {
+    -webkit-line-clamp: 1;
+}
+.is-ellipsis-2 {
+    -webkit-line-clamp: 2;
+}
+h1,
+h2,
+h3,
+h4 {
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+}
+.title {
+    font-weight: 600;
+}
+.field.has-shadow-field {
+    -webkit-box-shadow: 0 5px 30px hsla(224, 8%, 64%, 0.25) !important;
+    box-shadow: 0 5px 30px hsla(224, 8%, 64%, 0.25) !important;
+}
+.subtitle {
+    font-family: BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+    Fira Sans, Droid Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: 500;
+}
+.hero.is-light .subtitle,
+.subtitle {
+    color: #99a6b3;
+}
+.input {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+.input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px #fff inset;
+}
+.input:invalid {
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.input:active,
+.input:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.button {
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+}
+.button.is-shadowy {
+    box-shadow: 0 5px 30px hsla(224, 8%, 64%, 0.25);
+    -webkit-box-shadow: 0 5px 30px hsla(224, 8%, 64%, 0.25);
+
+    -moz-box-shadow: 0 5px 30px hsla(224, 8%, 64%, 0.25);
+}
+.button.is-shadowy:hover {
+    -webkit-box-shadow: 0 16px 43px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 16px 43px 2px rgba(0, 0, 0, 0.2);
+}
+a {
+    -webkit-transition: color 0.3s ease-out;
+    transition: color 0.3s ease-out;
+}
+.navbar.is-transparent {
+    background-color: transparent;
+    background-image: none;
+}
+.is-primary {
+    background-color: #FAC05E !important;
+}
+.is-success {
+    background-color: #3FA7D6 !important;
+}
+.has-text-primary {
+    color: #3FA7D6 !important;
+}
+#button-search {
+    transition: .5s ease-in-out;
+    width: 4em;
+}
+#button-image {
+    width: 2em;
+    animation: .05s logo_load linear;
+}
+@keyframes logo_load {
+    0% {
+        filter: blur(4px);
+    }
+    100% {
+        filter: blur(0);
+    }
+}
+#search_nav {
+    display: flex;
+    align-items: center;
+}
+#logo-searcher {
+    width: 3em;
+    max-height: unset !important;
+}
+.results {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 5em;
+    margin-left: 2em;
+}
+.results .result {
+    margin-bottom: 3em;
+}
+.results .result .title {
+    margin: 0;
+    font-size: 1.4em;
+}
+.results .result .title a {
+    color: #3FA7D6;
+}
+.results .result .title a:hover {
+    color: #3FA7D6;
+    text-decoration: underline;
+}
+.results .result p {
+    font-size: 1em;
+}
+.results .result p.url {
+    font-size: .7em;
+}
+a.has-text-primary:hover {
+    color: #2a85ac !important;
+}
+input:focus, input:hover, button:focus, button:hover {
+    border: none;
+}
+#basic-image {
+    animation: 2.5s flip infinite;
+    animation-play-state: paused;
+}
+#basic-image:hover {
+    animation: 2.5s flip infinite;
+}
+#basic-image.active {
+    animation-play-state: running !important;
+    animation: 1s flip infinite;
+}
+@keyframes flip {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
